@@ -15,7 +15,7 @@
         android:text="Your Songs List"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView"
+        android:id="@+id/Title"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="10dp"/>
@@ -26,7 +26,7 @@
         android:src="@drawable/edd"
         android:id="@+id/Song1"
         android:layout_marginTop="28dp"
-        android:layout_below="@+id/textView"
+        android:layout_below="@+id/Title"
         android:layout_alignParentStart="true"/>
 
     <TextView
@@ -50,5 +50,13 @@
         android:layout_below="@+id/Song1Name"
         android:layout_alignStart="@+id/Song1Name"/>
 
+    <TextView
+        android:id="@+id/DESC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="95dp"
+        android:text="This page contain a list of the songs the user have"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

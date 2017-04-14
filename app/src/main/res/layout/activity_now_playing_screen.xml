@@ -15,7 +15,7 @@
         android:text="Now Playing"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView"
+        android:id="@+id/NameofPage"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
@@ -26,15 +26,15 @@
         android:layout_below="@+id/textView"
         android:layout_alignParentStart="true"
         android:layout_marginTop="27dp"
-        android:id="@+id/textView2"
+        android:id="@+id/Title"
         android:textSize="18sp"/>
 
     <ImageView
         android:layout_width="250dp"
         android:layout_height="250dp"
         app:srcCompat="@drawable/edd"
-        android:id="@+id/imageView"
-        android:layout_below="@+id/textView2"
+        android:id="@+id/cover"
+        android:layout_below="@+id/Title"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="32dp" />
 
@@ -42,19 +42,19 @@
         android:src="@drawable/forward"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:id="@+id/imageView4"
+        android:id="@+id/backward"
         android:rotation="180"
         android:layout_alignParentBottom="true"
-        android:layout_toStartOf="@+id/textView"
+        android:layout_toStartOf="@+id/NameofPage"
         android:layout_marginEnd="14dp" />
 
     <ImageView
         android:src="@drawable/forward"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:id="@+id/imageView3"
+        android:id="@+id/Forward"
         android:layout_alignParentBottom="true"
-        android:layout_toEndOf="@+id/textView"
+        android:layout_toEndOf="@+id/NameofPage"
         android:layout_marginStart="17dp" />
 
     <SeekBar
@@ -62,17 +62,26 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         android:id="@+id/seekBar"
-        android:layout_above="@+id/imageView2"
+        android:layout_above="@+id/Start"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true" />
 
     <ImageView
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:id="@+id/imageView2"
+        android:id="@+id/Start"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:onClick="ChangeToPause"
         android:tag="1"
         android:background="@drawable/play"/>
 
+    <TextView
+        android:id="@+id/DESC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="95dp"
+        android:text="This page contain the song user is playing now"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

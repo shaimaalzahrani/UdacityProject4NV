@@ -15,9 +15,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SearchScreen" />
-        <activity android:name=".NowPlayingScreen" />
-        <activity android:name=".SongsList"></activity>
+        <activity android:name=".SearchScreen"
+            android:label="Search For A Song"/>
+        <activity android:name=".NowPlayingScreen"
+            android:label="Now Playing Song"/>
+        <activity android:name=".SongsList"
+            android:label="Your Songs List"/>
     </application>
 
 </manifest>
