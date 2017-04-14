@@ -5,12 +5,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-public class NowPlayingScreen extends AppCompatActivity {
+public class NowPlayingScreen extends AppCompatActivity implements View.OnClickListener{
+
+    ImageView Start;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_now_playing_screen);
+        Start = (ImageView) findViewById(R.id.List);
     }
 
     public void ChangeToPause(View view){
@@ -22,4 +25,14 @@ public class NowPlayingScreen extends AppCompatActivity {
             view.setTag(1);
         }
     }
+
+    @Override
+    public void onClick(View view){
+
+        if(view == Start){
+            ChangeToPause(view);
+        }
+    }
+
+
 }
