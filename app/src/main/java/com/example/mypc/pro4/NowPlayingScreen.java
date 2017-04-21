@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-public class NowPlayingScreen extends AppCompatActivity implements View.OnClickListener{
+public class NowPlayingScreen extends AppCompatActivity {
 
     ImageView Start;
 
@@ -14,6 +14,12 @@ public class NowPlayingScreen extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_now_playing_screen);
         Start = (ImageView) findViewById(R.id.List);
+
+        Start.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                ChangeToPause(v);
+            }
+        });
     }
 
     public void ChangeToPause(View view){
@@ -23,14 +29,6 @@ public class NowPlayingScreen extends AppCompatActivity implements View.OnClickL
         } else {
             view.setBackgroundResource(R.drawable.play);
             view.setTag(1);
-        }
-    }
-
-    @Override
-    public void onClick(View view){
-
-        if(view == Start){
-            ChangeToPause(view);
         }
     }
 

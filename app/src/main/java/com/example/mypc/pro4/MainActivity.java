@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class MainActivity extends AppCompatActivity{
 
     ImageView SearchImage;
     ImageView ListImage;
@@ -23,6 +23,30 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ListImage = (ImageView)findViewById(R.id.Search);
         ListText = (TextView)findViewById(R.id.Search2);
 
+
+        SearchImage.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                SearchScreen(v);
+            }
+        });
+
+        SearchText.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                SearchScreen(v);
+            }
+        });
+
+        ListImage.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                SongListScreen(v);
+            }
+        });
+
+        ListText.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                SongListScreen(v);
+            }
+        });
     }
 
     public void SearchScreen(View view){
@@ -35,17 +59,4 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         startActivity(intent);
     }
 
-    @Override
-    public void onClick(View view)
-    {
-        if(view.getId() == SearchImage.getId() || view.getId() == SearchText.getId())
-        {
-            SearchScreen(view);
-        }
-        else if (view.getId() == ListImage.getId() || view.getId() == ListText.getId())
-        {
-            SongListScreen(view);
-        }
-
-    }
 }

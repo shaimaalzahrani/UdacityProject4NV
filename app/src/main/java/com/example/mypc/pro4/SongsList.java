@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class SongsList extends AppCompatActivity implements View.OnClickListener{
+public class SongsList extends AppCompatActivity{
 
     ImageView Cover;
     TextView Name;
@@ -21,18 +21,29 @@ public class SongsList extends AppCompatActivity implements View.OnClickListener
         Name = (TextView) findViewById(R.id.Song1Name);
         Title = (TextView) findViewById(R.id.Song1Title);
 
+
+        Cover.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                ToPlaying(v);
+            }
+        });
+
+        Name.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                ToPlaying(v);
+            }
+        });
+
+        Title.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                ToPlaying(v);
+            }
+        });
+
     }
 
     public void ToPlaying(View view){
         Intent intent = new Intent(this, NowPlayingScreen.class);
         startActivity(intent);
-    }
-
-    @Override
-    public void onClick(View view){
-
-        if(view == Cover || view == Name || view == Title){
-            ToPlaying(view);
-        }
     }
 }
